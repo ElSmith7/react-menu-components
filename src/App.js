@@ -1,39 +1,25 @@
-import Button from "./Button";
-import { GoBell, GoCloudDownload, GoEye } from "react-icons/go";
+import Accordion from "./components/Accordion";
 
 function App() {
-  const handleClick = () => {
-    console.log("hi");
-  };
-  return (
-    <div>
-      <div>
-        <Button success outline onClick={handleClick} className="mb-5">
-          <GoBell />
-          Hello!
-        </Button>
-      </div>
-      <div>
-        <Button primary rounded>
-          <GoCloudDownload />
-          Buy Now
-        </Button>
-      </div>
-      <div>
-        <Button danger>
-          <GoEye />
-          See Deal
-        </Button>
-      </div>
-      <div>
-        <Button secondary outline rounded>
-          Hide Adds
-        </Button>
-      </div>
-      <div>
-        <Button warning>Delete Basket</Button>
-      </div>
-    </div>
-  );
+  const items = [
+    {
+      id: "dvcb",
+      label: "Are Dogs cute?",
+      content: "They sure are but puppies are cuter",
+    },
+    {
+      id: "dfvb",
+      label: "Are kittens cute?",
+      content: "Sure but they are a bit weird, cats are cuter",
+    },
+    {
+      id: "mvmkkd",
+      label: "Are rabbits cute?",
+      content:
+        "On the outside rabbits my seem cute and fluffy, however they are the devil incarnate. They eat their own babies. Never trust a rabbit.",
+    },
+  ];
+  return <Accordion items={items} />;
 }
+
 export default App;

@@ -1,25 +1,21 @@
-import Accordion from "./components/Accordion";
+import DropDown from "./components/DropDown";
 
 function App() {
-  const items = [
+  const options = [
     {
-      id: "dvcb",
-      label: "Are Dogs cute?",
-      content: "They sure are but puppies are cuter",
+      label: "Red",
+      value: "red",
     },
     {
-      id: "dfvb",
-      label: "Are kittens cute?",
-      content: "Sure but they are a bit weird, cats are cuter",
+      label: "Green",
+      value: "green",
     },
     {
-      id: "mvmkkd",
-      label: "Are rabbits cute?",
-      content:
-        "On the outside rabbits my seem cute and fluffy, however they are the devil incarnate. They eat their own babies. Never trust a rabbit.",
+      label: "Blue",
+      value: "blue",
     },
   ];
-  return <Accordion items={items} />;
+  return <DropDown options={options} />;
 }
 
 export default App;

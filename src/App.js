@@ -23,7 +23,7 @@ function App() {
     },
   ];
   return (
-    <DropDown selection={selection} onSelect={handleSelect} options={options} />
+    <DropDown value={selection} onChange={handleSelect} options={options} />
   );
 }
 

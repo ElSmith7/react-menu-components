@@ -19,7 +19,9 @@ function Sidebar() {
     );
   });
   return (
-    <div className="sticky top-0 overflow-y flex flex-col">{renderedLinks}</div>
+    <div className="sticky top-0 overflow-y flex flex-col items-start">
+      {renderedLinks}
+    </div>
   );
 }
 

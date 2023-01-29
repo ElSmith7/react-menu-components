@@ -15,7 +15,7 @@ function Table({ data, config, keyFn }) {
       </tr>
     );
   });
-  let renderedHeadings = config.map((column) => {
+  let renderedColumns = config.map((column) => {
     if (column.header) {
       return <Fragment key={column.label}>{column.header()}</Fragment>;
     }
@@ -25,7 +25,7 @@ function Table({ data, config, keyFn }) {
   return (
     <table className="table-auto border-spacing-2">
       <thead>
-        <tr className="border-b-2">{renderedHeadings}</tr>
+        <tr className="border-b-2">{renderedColumns}</tr>
       </thead>
       <tbody>{renderedRows}</tbody>
     </table>
